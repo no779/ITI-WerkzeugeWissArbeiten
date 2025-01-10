@@ -5,9 +5,10 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{geometry}
-\geometry{a4paper, top=25mm, left=30mm, right=30mm, bottom=25mm}
 \usepackage{hyperref}
-\usepackage{svg}
+
+% Seiteneinstellungen
+\geometry{a4paper, top=25mm, left=30mm, right=30mm, bottom=25mm}
 
 % Titel und Autor
 \title{Werkzeuge für das wissenschaftliche Arbeiten}
@@ -36,32 +37,32 @@ Mehrere Daten, also Objekte vom Typ \texttt{DataSetItem}, sollen in einem Datens
 \subsection{Aufbau}
 Es gibt drei Dateien:
 \begin{itemize}
-\item \texttt{dataset.py}: Enthält die Klassen \texttt{DataSetInterface} und \texttt{DataSetItem}.
-\item \texttt{implementation.py}: Hier soll die Klasse \texttt{DataSet} implementiert werden.
-\item \texttt{main.py}: Diese Datei nutzt die Klassen \texttt{DataSet} und \texttt{DataSetItem} und testet die Schnittstelle und Operationen von \texttt{DataSetInterface}.
+    \item \texttt{dataset.py}: Enthält die Klassen \texttt{DataSetInterface} und \texttt{DataSetItem}.
+    \item \texttt{implementation.py}: Hier soll die Klasse \texttt{DataSet} implementiert werden.
+    \item \texttt{main.py}: Diese Datei nutzt die Klassen \texttt{DataSet} und \texttt{DataSetItem} und testet die Schnittstelle und Operationen von \texttt{DataSetInterface}.
 \end{itemize}
 
 \subsection{Methoden}
 Die Klasse \texttt{DataSet} muss folgende Methoden implementieren:
 \begin{itemize}
-\item \texttt{__setitem__(self, name, id_content)}: Hinzufügen eines Datums mit Name, ID und Inhalt.
-\item \texttt{__iadd__(self, item)}: Hinzufügen eines \texttt{DataSetItem}.
-\item \texttt{__delitem__(self, name)}: Löschen eines Datums anhand des Namens.
-\item \texttt{__contains__(self, name)}: Überprüfung, ob ein Datum mit diesem Namen im Datensatz vorhanden ist.
-\item \texttt{__getitem__(self, name)}: Abrufen eines Datums anhand seines Namens.
-\item \texttt{__and__(self, dataset)}: Schnittmenge zweier Datensätze bestimmen und als neuen Datensatz zurückgeben.
-\item \texttt{__or__(self, dataset)}: Vereinigung zweier Datensätze bestimmen und als neuen Datensatz zurückgeben.
-\item \texttt{__iter__(self)}: Iteration über alle Daten des Datensatzes.
-\item \texttt{filtered_iterate(self, filter)}: Gefilterte Iteration über einen Datensatz.
-\item \texttt{__len__(self)}: Anzahl der Daten im Datensatz abrufen.
+    \item \texttt{\\_setitem\\_(self, name, id\_content)}: Hinzufügen eines Datums mit Name, ID und Inhalt.
+    \item \texttt{\\_iadd\\_(self, item)}: Hinzufügen eines \texttt{DataSetItem}.
+    \item \texttt{\\_delitem\\_(self, name)}: Löschen eines Datums anhand des Namens.
+    \item \texttt{\\_contains\\_(self, name)}: Überprüfung, ob ein Datum mit diesem Namen im Datensatz vorhanden ist.
+    \item \texttt{\\_getitem\\_(self, name)}: Abrufen eines Datums anhand seines Namens.
+    \item \texttt{\\_and\\_(self, dataset)}: Schnittmenge zweier Datensätze bestimmen und als neuen Datensatz zurückgeben.
+    \item \texttt{\\_or\\_(self, dataset)}: Vereinigung zweier Datensätze bestimmen und als neuen Datensatz zurückgeben.
+    \item \texttt{\\_iter\\_(self)}: Iteration über alle Daten des Datensatzes.
+    \item \texttt{filtered\_iterate(self, filter)}: Gefilterte Iteration über einen Datensatz.
+    \item \texttt{\\_len\\_(self)}: Anzahl der Daten im Datensatz abrufen.
 \end{itemize}
 
 % Abschnitt 2: Diagramm einfügen
 \section{Diagramm}
 \begin{figure}[h]
 \centering
-\includesvg[width=\textwidth]{../diagram/classes_files}
-\caption{Musterdiagramm der Klassenbeziehungen}
+\includegraphics[width=\textwidth]{C:/Users/nourk/OneDrive/Desktop/Git-2024-25/diagram/classes_files.pdf}
+\caption{Darstellung der Beziehungen zwischen den Klassen DataSetInterface, DataSet und DataSetItem}
 \label{fig:diagram}
 \end{figure}
 
@@ -78,4 +79,3 @@ Das VPL verwendet den gleichen Code, wobei \texttt{main.py} zusätzliche Testfä
 \footnotesize{Dateien befinden sich im Ordner \texttt{/code/} dieses Git-Repositories.}
 
 \end{document}
-
